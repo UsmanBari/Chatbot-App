@@ -1,0 +1,82 @@
+/* Error Fallback */
+.error-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.error-fallback h1 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.error-fallback button {
+  padding: 0.5rem 1rem;
+  background: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Browser Warning */
+.browser-warning {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #dc3545;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.25rem;
+  margin-top: 2rem;
+}
+
+/* Loading Screen */
+.initial-load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f0f;
+  z-index: 1000;
+}
+
+.loading-logo {
+  color: #00f0ff;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.loading-text {
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Light Mode Variants */
+.light .initial-load {
+  background: #f8f9fa;
+}
+
+.light .loading-text {
+  color: #212529;
+}
